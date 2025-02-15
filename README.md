@@ -47,7 +47,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
   <a href="https://meta.softwarejourney.net/">
-    <img src="www/images/screenshots/meta-random-search-screenshot-1.png" alt="Meta Random Search on mobile">
+    <img src="www/images/screenshots/meta-random-search-screenshot-1.png" alt="Meta Random Search on mobile" width="600">
   </a>
 
 The concept of Meta Random Search is simple: Randomize your default search engine!  
@@ -73,9 +73,7 @@ Meta Random Search is mostly build with simple HTML, CSS and JavaScript files an
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Watch a demo: <a href="https://www.youtube.com/watch?v=31glro2nXhs">https://www.youtube.com/watch?v=31glro2nXhs</a> 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/31glro2nXhs?si=nZm-_mL32GJUnX6i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+Watch a demo: <a href="https://www.youtube.com/watch?v=31glro2nXhs">https://www.youtube.com/watch?v=31glro2nXhs</a>
 
 Try it here: <a href="https://meta.softwarejourney.net/">https://meta.softwarejourney.net/</a>
 
@@ -108,7 +106,7 @@ Contributions and spontaneous discussions about search engines are welcomed. Fee
 <!-- LICENSE -->
 ## License
 
-Distributed under the Apache License Version 2.0. See `LICENSE.txt` for more information.
+Distributed under the Apache License Version 2.0. See `LICENSE` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
