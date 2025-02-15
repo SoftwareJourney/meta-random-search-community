@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meta Random Search</title>
+  <meta name="description" content="Randomize your default search engine for more diversity and resilience on the Web">
+  <link rel="search" type="application/opensearchdescription+xml" href="osd.xml" title="Meta Random Search">
+  <link rel="manifest" href="manifest.json?v=1">
+  <meta name="theme-color" content="#1FD1F9" />
+  <link rel="stylesheet" href="mainstyle.css?v=1.11">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="apple-touch-icon" href="/images/meta-random-search-icon-128px.png" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5ZRZ5EBLJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-T5ZRZ5EBLJ');
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+    integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/273b175226.js" crossorigin="anonymous"></script>
+  <script async src="index.js?v=1.14"></script>
+</head>
+
+<body style="margin-bottom: 48px;">
+  <main role="main" style="text-align: center">
+    <div style="margin-top: 0px; padding-top: 10px; background: linear-gradient(0deg, white, #1FD1F9 80%) no-repeat;">
+      <img src="images/meta-random-search-icon-128px.png" alt="" />
+    </div>
+    <h1>Meta Random Search</h1>
+    <br />
+    Randomize your default search engine:<br />
+    <div>
+      <input id="q" name="q" type="text" autofocus="autofocus" autocomplete="off">
+      <input type="submit" name="btnK" value="Search" style="font-weight: bold;" onclick="searchButton()">
+      <input type="button" name="btnSnooze" value="Snooze" title="Use only Google for the next 30 minutes"
+        onclick="snoozeButton()">
+    </div>
+    <div>
+      <ul id="searchEngineList">
+      </ul>
+      <span title="Reset" onclick="resetSearchEngineList()" class="fas fa-redo" style="padding-right: 10px;"></span>
+      <span title="Add a new search engine" onclick="addSearchEngine()" class="fas fa-plus"></span>
+      <br /><br />
+      <div style="text-align: center">
+        <p>More randomness, More diversity, More surprises, More discoveries!<br />
+          Comparing search engines is hard, giving you a <strong>fresh puff of serendipity</strong> is easy! Let's roll
+          the dice, shall we?</p>
+      </div>
+    </div>
+    <div id="dialog-confirm" title="Reset search engine list" style="display: none;">
+      <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>Do you want to
+        reset to default the list of search engines?</p>
+    </div>
+    <div id="dialog-add" title="Add a search engine" style="display: none;">
+      <label for="addSearchEngineName">Name:</label>
+      <select id="lstAddSearchEngine" name="addSearchEngineName2" onchange="onChangeLstAddSearchEngine()">
+        <option disabled selected value> -- select a search engine -- </option>
+        <option value="https://www.ecosia.org/search?q=%s">Ecosia</option>
+        <option value="https://www.mojeek.com/search?q=%s">Mojeek</option>
+        <option value="https://search.yahoo.com/search?p=%s">Yahoo</option>
+        <option value="https://you.com/search?q=%s">You.com</option>
+        <option value>Custom</option>
+      </select>
+      <input type="text" id="addSearchEngineName" name="addSearchEngineName" size="15" style="display: none;">
+      <br />
+      <label id="lblAddSearchEngineUrl" for="addSearchEngineUrl" style="display: none;">URL:</label> <input type="text"
+        id="addSearchEngineUrl" name="addSearchEngineUrl" size="34" style="display: none;"><br />
+      <p id="addSearchEngineUrlExample" style="display: none;">Example: https://www.google.com/search?q=%s</p>
+    </div>
+    </div>
+    <div><strong>If you like it</strong>, install our browser extension for
+      <a
+        href="https://chrome.google.com/webstore/detail/meta-random-search/lbjojakdjggbdpnnockgkbnbkgenfknj">Chrome</a>,
+      <a href="https://microsoftedge.microsoft.com/addons/detail/a-random-search/gnhkmkfaccdabghfigkfjdcemmeadmcg">Microsoft
+        Edge</a>,
+      <a href="https://addons.mozilla.org/firefox/addon/meta-random-search/">Firefox</a>.
+    </div>
+  </main>
+  <footer class="footer">
+    <div>Created by <a href="https://softwarejourney.net/">Software Journey</a></div>
+  </footer>
+</body>
+
+</html>

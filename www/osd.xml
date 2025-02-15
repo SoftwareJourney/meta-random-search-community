@@ -1,0 +1,6 @@
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+<ShortName>Meta Random Search</ShortName>
+<Description>Randomly use a different search engine for each search query</Description>
+<InputEncoding>UTF-8</InputEncoding>
+<Url type="text/html" method="get" template="https://meta.softwarejourney.net/search#{searchTerms}" />
+</OpenSearchDescription>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Meta Random Search - Randomizing your search engine...</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5ZRZ5EBLJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-T5ZRZ5EBLJ');
+  </script>
+  <script type="text/javascript">
+    const defaultSearchEngineUrls = [
+      { name: "Google", url: "https://www.google.com/search?q=%s" },
+      { name: "Bing", url: "https://www.bing.com/search?q=%s" },
+      { name: "Brave", url: "https://search.brave.com/search?q=%s" },
+      { name: "DuckDuckGo", url: "https://duckduckgo.com/?q=%s" }
+    ];
+    searchEngineUrls = localStorage.getItem("searchEngineUrls");
+    searchEngineUrlsJson = (searchEngineUrls !== null) ? JSON.parse(searchEngineUrls) : defaultSearchEngineUrls;
+    var randomValue = Math.floor(Math.random() * searchEngineUrlsJson.length);
+    var searchUrl = searchEngineUrlsJson[randomValue].url.replace("%s", window.location.hash.substr(1));
+    window.location.replace(searchUrl);
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

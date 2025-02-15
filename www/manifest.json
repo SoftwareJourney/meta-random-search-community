@@ -1,0 +1,31 @@
+{
+    "name": "Meta Random Search",
+    "short_name": "Meta Search",
+    "description": "Randomize your default search engine",
+    "categories": ["navigation", "personalization", "productivity"],
+    "start_url": "index.htm?pwa=1",
+    "scope": "./",
+    "icons": [
+        {
+            "src": "images/meta-random-search-icon-144px.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "images/meta-random-search-icon-192px.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "images/meta-random-search-icon-512px.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "theme_color": "#1DD882",
+    "background_color": "#fff",
+    "display": "minimal-ui"
+}
